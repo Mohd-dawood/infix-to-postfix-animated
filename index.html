@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infix to Postfix Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Infix ➜ Postfix</h1>
+
+    <input 
+      type="text" 
+      id="infix" 
+      placeholder="Example: (A+B)*C"
+    >
+
+    <button onclick="convert()">Convert</button>
+
+    <div class="output-box">
+      <span>Postfix:</span>
+      <div id="postfix">---</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

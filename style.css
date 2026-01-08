@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at top, #05173a, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card animation */
+.card {
+  width: 360px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  animation: zoomIn 0.9s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #2a5298;
+}
+
+/* Input animation */
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  transition: 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2a5298;
+  box-shadow: 0 0 10px rgba(42,82,152,0.6);
+}
+
+/* Button animation */
+button {
+  margin-top: 18px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Output box */
+.output-box {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.output-box span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Result animation */
+#postfix {
+  margin-top: 10px;
+  padding: 12px;
+  background: #f1f5ff;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1e3c72;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.4s;
+}
+
+#postfix.show {
+  opacity: 1;
+  transform: translateY(0);
+}
